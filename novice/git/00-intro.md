@@ -3,6 +3,55 @@ layout: lesson
 root: ../..
 title: Introducing Version Control
 ---
+
+#Teaching Git - 1
+
+1. Take 30 seconds and explain to your neighbor what your project workflow is. What tools do you use? How do you keep notes on what you did?
+2. Does your workflow change when you collaborate with other people? How do you communicate?
+_3 groups share their answers_
+
+##What is Version Control?
+_any guesses?_
+
+__Some questions__
+
+* How easy would it be to grab the code you used to develop a project/manuscript from last week? Last year? Last 5 years?
+* How much work would you lose if your laptop was stolen/damaged?
+* If you deleted part of your manuscript or analysis, then later realized that you wanted to keep it in, would you have to rewrite it?
+* If you were collaborating with someone on a manuscript or some code and someone rewrote something, how easy would it be to track down who changed it and why?
+
+__Version control...__
+
+* keeps track of changes to a file/folder
+* keeps a backup of changing files
+* stores of history of the changes
+* allows you to go back to previous versions of your project
+* allows you to work efficiently from multiple computers in multiple locations
+* allows many people to make changes concurrently (collaboration!)
+
+__Do you currently use some kind of version control?__
+
+* [The many-folder system](http://hginit.com/i/01-copies.png)
+* [Final.doc](http://www.phdcomics.com/comics/archive.php?comicid=1531)
+* [cup of USBs](http://www.eeweb.com/rtz/version-control)
+* Dropbox
+  * only keeps 30-day history
+  * longer with "Packrat" but lacks concurrent change ability
+* Email files to yourself
+* Time Machine (or other automated backup system)
+
+##Why should I use a version control system?
+__i.e., what makes version control better than Dropbox?__
+
+* keeping lots of copies of files clogs up your system and can be confusing
+* sync copies of a project across computers
+* easily share project data/code/text with collaborators
+* easily pubish/share data/code/text with scientific manuscripts
+* __ability to collaboratively code and merge multiple changes__
+* __ability to revert to earlier copies when you (or someone else) messes up__
+
+__Scenario 1:__
+
 Wolfman and Dracula have been hired by Universal Missions
 (a space services spinoff from Euphoric State University)
 to investigate if it is possible to send their next planetary lander to Mars.

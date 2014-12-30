@@ -28,6 +28,13 @@ version control is much better for this than this:
   <p>"Piled Higher and Deeper" by Jorge Cham, http://www.phdcomics.com</p>
 </div>
 
+###Local Repo
+Git will keep track of the _changes_ to your files, rather than keep multiple copies of the files. 
+It saves the first version, then keeps track of subsequent changes to that version. 
+This makes it efficient and speedy. 
+It can recreate any version (go back in time) by adding up all the changes 
+to get to where you want to be.
+
 ### Setting Up
 
 The first time we use Git on a new machine,
@@ -138,6 +145,10 @@ nothing to commit (create/copy files and use "git add" to track)
 ~~~
 {:class="out"}
 
+_On the white board draw a box representing the working area and
+ explain that this is where you work and make changes._
+
+
 ### Tracking Changes to Files
 
 Let's create a file called `mars.txt` that contains some notes
@@ -145,6 +156,7 @@ about the Red Planet's suitability as a base.
 (We'll use `nano` to edit the file;
 you can use whatever editor you like.
 In particular, this does not have to be the core.editor you set globally earlier.)
+_also create a second file named venus.txt_
 
 ~~~
 $ nano mars.txt
@@ -199,6 +211,17 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The "untracked files" message means that there's a file in the directory
 that Git isn't keeping track of.
+
+_Now, lets add files that are inside:
+On the white board draw a box representing the staging area (index) and 
+explain that this is where we set up the next snapshot of our project.
+Like a photographer in a studio, we're putting together a shot 
+before we actually snap the picture.
+Connect the working area box and the staging box with 'git add'._
+
+_`git add .` This adds __all__ the files in our repository.
+But sometimes we only want to add a single file at a time._
+
 We can tell Git that it should do so using `git add`:
 
 ~~~
@@ -225,8 +248,37 @@ $ git status
 ~~~
 {:class="out"}
 
+
+_-- highlight the "Untracked files" section and that git tells you how to add a file to the next commit._
+
 Git now knows that it's supposed to keep track of `mars.txt`,
 but it hasn't yet recorded any changes for posterity as a commit.
+
+_Tell git _"Hey, we want you to remember the way that the files look right now"_._
+
+_On the white board draw a box representing the project history. 
+Once we take a snapshot of the project that snapshot becomes a permanent reference point in the project's history that we can always go back to.
+The history is like a photo album of changes, and each snapshot has a time stamp, the name of the photographer, and a description.
+Connect the staging area to the history with `git commit -m "message"`.
+In order to save a snapshot of the current state (revision) of the repository, we use the commit command. 
+This command is always associated with a message describing the changes since the last commit and indicating their purpose. 
+Git will ask you to add a commit message. 
+This is just to remind you what changes you made. 
+Informative commit messages will serve you well someday, so make a habit of never committing changes without at least a full sentence description._
+
+__ADVICE: Commit often__
+_In the same way that it is wise to often save a document that you are working on, so too is it wise to save numerous revisions of your code. 
+More frequent commits increase the granularity of your undo button._
+
+__ADVICE: Good commit messages__
+[because it's important!](http://www.commitlogsfromlastnight.com/)
+_There are no hard and fast rules, but good commits are atomic: they are the smallest change that remain meaningful. 
+A good commit message usually contains a one-line description followed by a longer explanation if necessary.
+For code, it's useful to commit changes that can be reviewed by someone in under an hour. 
+Or it can be useful to commit changes that "go together" - for example, one paragraph of a manuscript, or each new function added to your script.
+For example, if you work on your code all day long (add 200 lines of code, including 5 new functions and write 7 pages of your new manuscript including deleting an old paragraph), and at 3:00 you make a fatal error or deletion, but you didn't commit once, then you will have a hard time recreating the version you are looking for - because it doesn't exist!_
+
+
 To get it to do that,
 we need to run one more command:
 
@@ -254,6 +306,11 @@ If we just run `git commit` without the `-m` option,
 Git will launch `nano` (or whatever other editor we configured at the start)
 so that we can write a longer message.
 
+__ADVICE:__ _You must have a commit message. It's good practice and git won't let you commit without one._
+
+_If you only want to add one file, use `git commit filename.txt -m "message"
+`git commit -am "message` will add ALL tracked files._
+
 If we run `git status` now:
 
 ~~~
@@ -268,7 +325,8 @@ nothing to commit, working directory clean
 
 it tells us everything is up to date.
 If we want to know what we've done recently,
-we can ask Git to show us the project's history using `git log`:
+we can ask Git to show us the project's history using `git log`. 
+You can see all the changes you have ever made using this command:
 
 ~~~
 $ git log
@@ -291,6 +349,13 @@ the short identifier printed by the `git commit` command earlier),
 the revision's author,
 when it was created,
 and the log message Git was given when the revision was created.
+
+_Useful `git log` flags:_
+* -3 (shows only the 3 most recent commits)
+* --oneline (condenses each log into a single line, for quicker scanning)
+* --stat (gives more details for each commit, ++--)
+* --since=X.minutes/hours/days/weeks/months/years or YY-MM-DD-HH:MM (for specific time frames)
+* --author=<pattern> (look for specific people)
 
 > #### Where Are My Changes?
 >
@@ -598,6 +663,10 @@ index df0654a..b36abfd 100644
 ~~~
 {:class="out"}
 
+_Useful git diff flags_
+`git diff --stat` gives us a summary of the filename and number of insertions/deletions
+`git diff -- filename` looks at the differences for a specific file
+
 In this way,
 we build up a chain of revisions.
 The most recent end of the chain is referred to as `HEAD`;
@@ -655,6 +724,12 @@ index df0654a..b36abfd 100644
 
 ### Recovering Old Versions
 
+_So far, this seems like a lot of work. Why are we keeping track of all these little things??
+Let's say you fatally ruin a file during an editing mistake 
+(like when I deleted an awesome paragraph from my dissertation instead of cutting and pasting it like I meant to.) 
+Maybe you even accidentally delete an important file (This code is old, why should I keep it?). 
+If you have version control, you don't need to track down your System Administrator. You can fix your problem easily!_
+
 All right:
 we can save changes to files and see what we've changed---how
 can we restore older versions of things?
@@ -709,6 +784,10 @@ As you might guess from its name,
 In this case,
 we're telling Git that we want to recover the version of the file recorded in `HEAD`,
 which is the last saved revision.
+
+_This would work even if we deleted our file, and wanted to get it back!_
+_delete mars.txt, and then show that it can be checked back out_
+
 If we want to go back even further,
 we can use a revision identifier instead:
 
@@ -757,12 +836,18 @@ without also undoing changes made later to the conclusion.
 If the introduction and conclusion are stored in separate files,
 on the other hand,
 moving backward and forward in time becomes much easier.
+Or for your code, if you store functions in files separate from code that executes them, or makes figures,
+you can go back in time to find or retrieve specific chunks.
 
 ### Ignoring Things
 
 What if we have files that we do not want Git to track for us,
 like backup files created by our editor
 or intermediate files created during data analysis.
+
+_while git can keep track of data files, this is often not a great idea.
+Share story of .rdata files in collaborative project. Why they needed to be in the .git ignore file_
+
 Let's create a few dummy files:
 
 ~~~
@@ -789,6 +874,8 @@ $ git status
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 {:class="out"}
+
+_Note: if you already added these files (git add .) you can unstage them by typing git reset HEAD_
 
 Putting these files under version control would be a waste of disk space.
 What's worse,
@@ -884,6 +971,30 @@ $ git status --ignored
 nothing to commit, working directory clean
 ~~~
 {:class="out"}
+
+_To discard all your most recent changes and GO BACK IN TIME, 
+first look at your `git log` to decide what version you want to go back to. 
+Remember the first 5-7 digits in the commit code of the version that wasn't screwed up._
+
+_use `git reset --hard versioncode`_
+
+_To roll back to a specific file, use 
+`git checkout version name --filename`_
+
+_To roll back one version (usually I know that I messed up pretty quickly)
+`git checkout master~1 PathToFile`_
+
+
+_A short exercise to show moving back and forth. If I mess up and I notice right away, 
+ might want to go back in time quickly. Commit some changes to `mars.txt`. 
+ I can return to the previous version by typing `git checkout master~1 mars.txt`, and then
+ committing those changes with a message like "I deleted the thing I just added". 
+ This will preserve your entire history, including the short-lived mistake, which will allow
+ you to return to it if you should decide it wasn't a mistake at all. 
+ If you check out the entire repository using `git checkout master~1` you will be in 
+ "detached head state". This can be quickly remedied by typing `git checkout master`, to return 
+ you to the correct place. Detached head is when the head is not the same version as the master._
+
 
 <div class="keypoints" markdown="1">
 
