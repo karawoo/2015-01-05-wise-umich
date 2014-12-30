@@ -40,6 +40,9 @@ __Do you currently use some kind of version control?__
 * Email files to yourself
 * Time Machine (or other automated backup system)
 
+__Suggest that students who are familiar with git and GitHub move to sit near students who are not. 
+Maybe move to the center of their tables, or towards the aisles to act as helpers??__
+
 ##Why should I use a version control system?
 __i.e., what makes version control better than Dropbox?__
 

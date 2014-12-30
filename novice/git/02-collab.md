@@ -26,6 +26,59 @@ Most programmers use hosting services like [GitHub](http://github.com) or [BitBu
 to hold those master copies;
 we'll explore the pros and cons of this in the final section of this lesson.
 
+Git is:
+
+* distributed version control system (don't worry about the details)
+* designed to be fast and efficient
+* Has an awesome logo [octocat](http://octodex.github.com/images/original.jpg)
+* FREE
+
+Git can set up a repository on your local computer - no connection to a big server or online is needed to make it work!
+
+###GitHub
+
+GitHub is where code is collected online.
+
+Show a project on GitHub (further justification for learning).
+* [white et al 2012](https://github.com/weecology/white-etal-2012-ecology)
+* [Class Seminar] (https://github.com/PermuteSeminar/PermuteSeminar-2014)
+* [manuscript] (https://github.com/weecology/data-sharing-paper)
+* [R packages] (https://github.com/vqv/ggbiplot)
+
+
+GitHub connects your local repositories to the online world and allows your project to get __social__
+
+You can __clone__ or __fork__ other people's repositories (more on that later).
+
+Easily see changes that have been made (and when) and who made the changes
+
+__citable!__
+
+__C.V./resume line!__
+
+#####github.com?
+
+GitHub is a site where many people store their open (and closed) source code repositories. 
+It provides tools for browsing, collaborating on and documenting code. 
+Your home institution may have a repository hosting system of it's own. 
+To find out, ask your system administrator. 
+GitHub, much like other forge hosting services (launchpad, bitbucket, googlecode, sourceforge etc.) provides :
+
+* landing page support
+* wiki support
+* network graphs and time histories of commits
+* code browser with syntax highlighting
+* issue (ticket) tracking
+* user downloads
+* varying permissions for various groups of users
+* commit triggered mailing lists
+* other service hooks (twitter, etc.)
+
+__Give a quick tour of GitHub__
+
+__EXERCISE:__ _Show everyone how to make a new account. 
+If they have an account already, ask them to help their neighbors get started._
+
 Let's start by sharing the changes we've made to our current project with the world.
 Log in to GitHub,
 then click on the icon in the top right corner to create a new repository called `planets`:
@@ -128,6 +181,9 @@ Branch master set up to track remote branch master from origin.
 ~~~
 {:class="out"}
 
+__Show that the files now exist online__
+
+
 > ##### Proxy
 >
 > If the network you are connected to uses a proxy there is an chance that your last
@@ -193,6 +249,9 @@ If someone else had pushed some changes to the repository on GitHub,
 though,
 this command would download them to our local repository.
 
+__Add a README.md file on the browser. Demonstrate pulling changes back down to your machine__
+__Add NASA data to my local repository (http://www.nasa.gov/open/data.html). Push changes__
+
 For the next step, get into pairs.
 Pick one of your repositories on Github to use for collaboration.
 
@@ -206,6 +265,8 @@ Pick one of your repositories on Github to use for collaboration.
 The partner whose repository is being used needs to give the other person access.
 On Github, click the settings button on the right,
 then select Collaborators, and enter your partner's username.
+
+__Demonstrate how to add collaborators__
 
 <img src="img/github-add-collaborators.png" alt="Adding collaborators on Github" />
 
