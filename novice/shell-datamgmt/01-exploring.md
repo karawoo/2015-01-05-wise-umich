@@ -10,7 +10,7 @@ Open your Terminal (i.e. shell prompt)
 
 My Terminal looks like this:
 
-![](shell_prompt.png)
+![](prompt.png)
 
 Yours might look different (these can be easily customized). Usually includes something like `username@machinename`, followed by the current working directory (more about that soon) and a `$` sign
 
@@ -30,15 +30,6 @@ If you enter a command that shell doesn't recognize, it will just report an erro
 $ gobbeltdfsf
 -bash: gobbeltdfsf: command not found
 ```
-
-Now let's enter something useful. Let's navigate to the home directory of your computer (more on navigation very shortly)
-
-```
-cd ~
-pwd
-```
-
-What does it say?
 
 ---
 
@@ -74,10 +65,10 @@ Most operating systems have a hierarchical directory structure. The very top is 
 
 ```
 $ pwd
-/Users/barneche
+/Users/Kara
 ```
 
-Note that I'm in my *home* directory. Whenever you start up a terminal, you will start in the home directory. Every user has their own home directory where they have full access to do whatever they want. For example, my user ID is `barneche`, the `pwd` command tells me that I am in the `/Users/barneche` directory. This is the home directory for the `barneche` user. Yours should (hopefully) look different.
+Note that I'm in my *home* directory. Whenever you start up a terminal, you will start in the home directory. Every user has their own home directory where they have full access to do whatever they want. For example, my user ID is `Kara`, the `pwd` command tells me that I am in the `/Users/Kara` directory. This is the home directory for the `Kara` user. Yours should (hopefully) look different.
 
 **Changing Directories**
 
@@ -95,9 +86,9 @@ Now change back to your home again
 cd ~
 ```
 
-Tip: `~` is a shortcut for the HOME directory for any user. My home is `/Users/barneche` and I can get there three ways:
+Tip: `~` is a shortcut for the HOME directory for any user. My home is `/Users/Kara` and I can get there three ways:
 
-`cd /Users/barneche` OR `cd ~` OR `cd`.
+`cd /Users/Kara` OR `cd ~` OR `cd`.
 
 You might be wondering why there is a **standard** shortcut for the home directory. It provides a convenient way of giving a point of access which is independent of machine and username. For instance, `~/Downloads` should work for all Mac users.
 
@@ -128,7 +119,6 @@ from **anywhere**.
 
 ```
 $ ls
-Applications    Documents   Dropbox     Library     Music       Public      Desktop     Downloads         Movies      Pictures
 ```
 
 When you enter the `ls` command lists the contents of the current directory. `ls` is extremely useful both for beginners and experts. `ls` can not only list the current directory contents but also contents from anywhere without changing working directories.
@@ -145,23 +135,44 @@ or even multiple directories at once
 ls ~ /usr
 ```
 
+### Exercise
+
+1. Using the shell, navigate to the folder of data that you downloaded for Christie's R lesson this morning.
+2. List the contents of this directory.
+3. Change back into your home directory.
+4. Now, without changing your directory (i.e. without using `cd`), list the contents of the data directory again.
+
+```
+$ cd ~/Desktop/swc-data/
+$ ls
+$ cd ~
+$ ls ~/Desktop/swc-data
+```
+
 Now we can start adding more options. Recall that commands can take both options (with a `-` or `--`) followed by arguments. Let's add some to `ls`.
 
 ```
-cd
-cd gapminder
-ls -l
-SCI-5052:gapminder barneche$ ls -l
-total 48
-drwxr-xr-x  4 barneche  staff   136  7 Feb 14:14 R
--rw-r--r--  1 barneche  staff    20  7 Feb 10:55 README.md
--rw-r--r--  1 barneche  staff   476  7 Feb 10:55 analysis.R
-drwxr-xr-x  4 barneche  staff   136  7 Feb 10:55 data
--rwxr-xr-x  1 barneche  staff    47  7 Feb 11:48 executable.R
--rwxr-xr-x  1 barneche  staff    38  7 Feb 11:49 executable.sh
-drwxr-xr-x  3 barneche  staff   102  7 Feb 15:56 figures
--rw-r--r--  1 barneche  staff   204  7 Feb 10:55 gapminder.Rproj
--rw-r--r--  1 barneche  staff  3150  7 Feb 10:55 rich-for-functions.R
+$ cd
+$ cd ~/Desktop/swc-data
+$ ls -l
+total 2288
+-rwxr-xr-x@ 1 Kara  staff     1715 Dec 31 09:15 car-speeds.csv
+-rwxr-xr-x@ 1 Kara  staff     5374 Dec 31 09:15 inflammation-02.csv
+-rwxr-xr-x@ 1 Kara  staff     5403 Dec 31 09:15 inflammation-03.csv
+-rwxr-xr-x@ 1 Kara  staff     5427 Dec 31 09:15 inflammation-04.csv
+-rwxr-xr-x@ 1 Kara  staff     5405 Dec 31 09:15 inflammation-05.csv
+-rwxr-xr-x@ 1 Kara  staff     5390 Dec 31 09:15 inflammation-06.csv
+-rwxr-xr-x@ 1 Kara  staff     5402 Dec 31 09:15 inflammation-07.csv
+-rwxr-xr-x@ 1 Kara  staff     5412 Dec 31 09:15 inflammation-08.csv
+-rwxr-xr-x@ 1 Kara  staff     5387 Dec 31 09:15 inflammation-09.csv
+-rwxr-xr-x@ 1 Kara  staff     5402 Dec 31 09:15 inflammation-10.csv
+-rwxr-xr-x@ 1 Kara  staff     5423 Dec 31 09:15 inflammation-11.csv
+-rwxr-xr-x@ 1 Kara  staff     5400 Dec 31 09:15 inflammation-12.csv
+-rwxr-xr-x@ 1 Kara  staff       14 Dec 31 09:15 small-01.csv
+-rwxr-xr-x@ 1 Kara  staff       17 Dec 31 09:15 small-02.csv
+-rwxr-xr-x@ 1 Kara  staff       14 Dec 31 09:15 small-03.csv
+-rwxr-xr-x@ 1 Kara  staff     2115 Jan  2 11:34 species.csv
+-rwxr-xr-x@ 1 Kara  staff  1058902 Jan  2 11:01 surveys.csv
 ```
 
 By adding `-l` to the command, we changed the output to the long format.
@@ -176,7 +187,7 @@ The `t` options now sorts by time.
 
 Similarly you can try the following:
 
-Some options:
+Some options: *(list these on the board)*
 `-a`  List all files even those that are hidden. Files starting with a `.` are considered hidden;
 `-F`  All a trailing slash to help identify folders;
 `-l`  Long format;
@@ -184,22 +195,30 @@ Some options:
 `-S`  Sort by file size;
 `-t`  Sort by modification time.
 
-Try some of these. Do you see any new files that we have not discussed before? You can even combine several of these options in a single command.
+Try some of these. Do you see any new files that we have not discussed before? You can even combine several of these options in a single command like we did above with `ls -lt`.
 
 What are all the extra fields in the long format?
 
 ```
 $ ls -l
-total 48
-drwxr-xr-x  4 barneche  staff   136  7 Feb 14:14 R
--rw-r--r--  1 barneche  staff    20  7 Feb 10:55 README.md
--rw-r--r--  1 barneche  staff   476  7 Feb 10:55 analysis.R
-drwxr-xr-x  4 barneche  staff   136  7 Feb 10:55 data
--rwxr-xr-x  1 barneche  staff    47  7 Feb 11:48 executable.R
--rwxr-xr-x  1 barneche  staff    38  7 Feb 11:49 executable.sh
-drwxr-xr-x  3 barneche  staff   102  7 Feb 15:56 figures
--rw-r--r--  1 barneche  staff   204  7 Feb 10:55 gapminder.Rproj
--rw-r--r--  1 barneche  staff  3150  7 Feb 10:55 rich-for-functions.R
+total 2288
+-rwxr-xr-x@ 1 Kara  staff     1715 Dec 31 09:15 car-speeds.csv
+-rwxr-xr-x@ 1 Kara  staff     5374 Dec 31 09:15 inflammation-02.csv
+-rwxr-xr-x@ 1 Kara  staff     5403 Dec 31 09:15 inflammation-03.csv
+-rwxr-xr-x@ 1 Kara  staff     5427 Dec 31 09:15 inflammation-04.csv
+-rwxr-xr-x@ 1 Kara  staff     5405 Dec 31 09:15 inflammation-05.csv
+-rwxr-xr-x@ 1 Kara  staff     5390 Dec 31 09:15 inflammation-06.csv
+-rwxr-xr-x@ 1 Kara  staff     5402 Dec 31 09:15 inflammation-07.csv
+-rwxr-xr-x@ 1 Kara  staff     5412 Dec 31 09:15 inflammation-08.csv
+-rwxr-xr-x@ 1 Kara  staff     5387 Dec 31 09:15 inflammation-09.csv
+-rwxr-xr-x@ 1 Kara  staff     5402 Dec 31 09:15 inflammation-10.csv
+-rwxr-xr-x@ 1 Kara  staff     5423 Dec 31 09:15 inflammation-11.csv
+-rwxr-xr-x@ 1 Kara  staff     5400 Dec 31 09:15 inflammation-12.csv
+-rwxr-xr-x@ 1 Kara  staff       14 Dec 31 09:15 small-01.csv
+-rwxr-xr-x@ 1 Kara  staff       17 Dec 31 09:15 small-02.csv
+-rwxr-xr-x@ 1 Kara  staff       14 Dec 31 09:15 small-03.csv
+-rwxr-xr-x@ 1 Kara  staff     2115 Jan  2 11:34 species.csv
+-rwxr-xr-x@ 1 Kara  staff  1058902 Jan  2 11:01 surveys.csv
 ```
 * Files begin with a `-` and directories with a `d`.
 * Followed by permissions for the user, group, and everyone.
@@ -208,19 +227,11 @@ drwxr-xr-x  3 barneche  staff   102  7 Feb 15:56 figures
 * The owner of the file
 * What group this person belongs to
 * Size of file in bytes  (Quick question: How do you change this?)
-* Date an time the file was last modified
+* Date and time the file was last modified
 * Name of file.
 
-One last argument for the function `ls` now.
 
-```
-$ ls -F
-R/    		 data/			 executable.sh*	   messy-folder/
-README.md	 dplyr.R		 figures/		   repeating.R
-analysis.R	 executable.R*   gapminder.Rproj   rich-for-functions.R
-```
-
-The `-F` flag tells the computer to list the files in a way that shows their file type. There are (probably) several items in your home directory, notice that many have a slash at the end. This tells us that all of these items are directories as opposed to files. If a file has an asterisk at the end, it is *executable*.
+**Quick exercise:** List the files in your data directory in long format, by file size, with human readable file sizes.
 
 **Arguments**
 
@@ -263,8 +274,8 @@ file <filename>
 e.g.
 
 ```
-file Location.md
-Location.md: ASCII English text
+file surveys.csv
+surveys.csv: ASCII text
 ```
 
 Notice that the function `file` is unfortunately not defined in GitBash. Alternatively, Windows users can have a quick look at the file to see the contents of its first lines using the function `head`

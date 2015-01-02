@@ -1,6 +1,6 @@
 ---
 layout: lesson
-root: ../../
+root: ../..
 Title: The Unix Shell: Intro
 ---
 
