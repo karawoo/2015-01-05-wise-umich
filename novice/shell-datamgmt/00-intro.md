@@ -1,7 +1,7 @@
 ---
 layout: lesson
 root: ../..
-Title: The Unix Shell: Intro
+Title: The Unix Shell
 ---
 
 ## Initial setup (for Windows users only):
@@ -32,4 +32,4 @@ The shell is just a program and there are many different shell programs that hav
 
 ***
 
-These lessons were adapted from materials by [Diego Barneche](http://nicercode.github.io/2014-02-13-UNSW/lessons/60-shell/)
+Acknowledgments: these lessons were adapted by Kara Woo from materials by [Diego Barneche](http://nicercode.github.io/2014-02-13-UNSW/lessons/60-shell/).

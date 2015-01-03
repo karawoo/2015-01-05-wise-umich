@@ -18,18 +18,24 @@ Yours might look different (these can be easily customized). Usually includes so
 
 You can just enter commands directly into the shell.
 
-```
-echo Morning People
-```
+~~~
+$ echo Morning People
+~~~
+{:class="in"}
 
 We just used a command called `echo` and gave it an argument called `Morning People`.
 
 If you enter a command that shell doesn't recognize, it will just report an error
 
-```
+~~~
 $ gobbeltdfsf
+~~~
+{:class="in"}
+
+~~~
 -bash: gobbeltdfsf: command not found
-```
+~~~
+{:class="out"}
 
 ---
 
@@ -37,19 +43,22 @@ $ gobbeltdfsf
 
 Commands are often followed by one or more options that modify their behavior, and further, by one or more arguments, the items upon which the command acts. So most commands look kind of like this:
 
-```
-e.g. ls -l ~/
-```
+~~~
+$ ls -l ~/
+~~~
+{:class="in"}
 
-```
-command -letter
-```
+~~~
+$ command -letter
+~~~
+{:class="in"}
 
 **OR**
 
-```
-command --word
-```
+~~~
+$ command --word
+~~~
+{:class="in"}
 
 ## Knowing where you are and seeing what's around
 
@@ -63,28 +72,36 @@ Three really imporant commands:
 
 Most operating systems have a hierarchical directory structure. The very top is called the *home* directory. Directories are often called "folders" because of how they are represented in GUIs. Directories are just listings of files. They can contain other files or (sub) directories.
 
-```
+~~~
 $ pwd
+~~~
+{:class="in"}
+
+~~~
 /Users/Kara
-```
+~~~
+{:class="out"}
 
 Note that I'm in my *home* directory. Whenever you start up a terminal, you will start in the home directory. Every user has their own home directory where they have full access to do whatever they want. For example, my user ID is `Kara`, the `pwd` command tells me that I am in the `/Users/Kara` directory. This is the home directory for the `Kara` user. Yours should (hopefully) look different.
 
-**Changing Directories**
+### Changing Directories
 
 You can change the working directory at any time using the `cd` command.
 
-```
-cd
-cd /usr/bin
-pwd
-ls
-```
+~~~
+$ cd
+$ cd /usr/bin
+$ pwd
+$ ls
+~~~
+{:class="in"}
+
 Now change back to your home again
 
-```
-cd ~
-```
+~~~
+$ cd ~
+~~~
+{:class="in"}
 
 Tip: `~` is a shortcut for the HOME directory for any user. My home is `/Users/Kara` and I can get there three ways:
 
@@ -92,48 +109,54 @@ Tip: `~` is a shortcut for the HOME directory for any user. My home is `/Users/K
 
 You might be wondering why there is a **standard** shortcut for the home directory. It provides a convenient way of giving a point of access which is independent of machine and username. For instance, `~/Downloads` should work for all Mac users.
 
-**Full versus relative paths**
+### Full versus relative paths
 
 In the command line you can use both full paths (much like someone's street address with post code) OR offer relative directions from one's current location. You can do the same here.
 
-```
-cd /usr
-pwd
-```
+~~~
+$ cd /usr
+$ pwd
+~~~
+{:class="in"}
 
 We're now in the `usr/` directory. Now change to `bin/`
 
-```
-cd bin
-```
+~~~
+$ cd bin
+~~~
+{:class="in"}
 
 This is the same as doing:
 
-```
-cd /usr/bin
-```
+~~~
+$ cd /usr/bin
+~~~
+{:class="in"}
 
 from **anywhere**.
 
-**List all the files in this directory**
+### List all the files in this directory
 
-```
+~~~
 $ ls
-```
+~~~
+{:class="in"}
 
 When you enter the `ls` command lists the contents of the current directory. `ls` is extremely useful both for beginners and experts. `ls` can not only list the current directory contents but also contents from anywhere without changing working directories.
 
 e.g.
 
-```
-ls /usr
-```
+~~~
+$ ls /usr
+~~~
+{:class="in"}
 
 or even multiple directories at once
 
-```
-ls ~ /usr
-```
+~~~
+$ ls ~ /usr
+~~~
+{:class="in"}
 
 ### Exercise
 
@@ -142,19 +165,26 @@ ls ~ /usr
 3. Change back into your home directory.
 4. Now, without changing your directory (i.e. without using `cd`), list the contents of the data directory again.
 
-```
+~~~
 $ cd ~/Desktop/swc-data/
 $ ls
 $ cd ~
 $ ls ~/Desktop/swc-data
-```
+~~~
+{:class="in"}
+
+### Arguments
 
 Now we can start adding more options. Recall that commands can take both options (with a `-` or `--`) followed by arguments. Let's add some to `ls`.
 
-```
+~~~
 $ cd
 $ cd ~/Desktop/swc-data
 $ ls -l
+~~~
+{:class="in"}
+
+~~~
 total 2288
 -rwxr-xr-x@ 1 Kara  staff     1715 Dec 31 09:15 car-speeds.csv
 -rwxr-xr-x@ 1 Kara  staff     5374 Dec 31 09:15 inflammation-02.csv
@@ -173,15 +203,17 @@ total 2288
 -rwxr-xr-x@ 1 Kara  staff       14 Dec 31 09:15 small-03.csv
 -rwxr-xr-x@ 1 Kara  staff     2115 Jan  2 11:34 species.csv
 -rwxr-xr-x@ 1 Kara  staff  1058902 Jan  2 11:01 surveys.csv
-```
+~~~
+{:class="out"}
 
 By adding `-l` to the command, we changed the output to the long format.
 
 Now let's add more options
 
-```
-ls -lt
-```
+~~~
+$ ls -lt
+~~~
+{:class="in"}
 
 The `t` options now sorts by time.
 
@@ -199,8 +231,12 @@ Try some of these. Do you see any new files that we have not discussed before? Y
 
 What are all the extra fields in the long format?
 
-```
+~~~
 $ ls -l
+~~~
+{:class="in"}
+
+~~~
 total 2288
 -rwxr-xr-x@ 1 Kara  staff     1715 Dec 31 09:15 car-speeds.csv
 -rwxr-xr-x@ 1 Kara  staff     5374 Dec 31 09:15 inflammation-02.csv
@@ -219,7 +255,9 @@ total 2288
 -rwxr-xr-x@ 1 Kara  staff       14 Dec 31 09:15 small-03.csv
 -rwxr-xr-x@ 1 Kara  staff     2115 Jan  2 11:34 species.csv
 -rwxr-xr-x@ 1 Kara  staff  1058902 Jan  2 11:01 surveys.csv
-```
+~~~
+{:class="out"}
+
 * Files begin with a `-` and directories with a `d`.
 * Followed by permissions for the user, group, and everyone.
 * Permissions are in the order of read, write, and execute. If any * group is missing a permission, you'll see a `-`.
@@ -239,25 +277,26 @@ Most programs take additional arguments that control their exact behavior. For e
 
 Most commonly used shell programs have a manual. You can access the manual using the `man` program. Try entering:
 
-```
+~~~
 $ man ls
-```
+~~~
+{:class="in"}
 
 This will open the manual page for `ls`. Use the space key to go forward and b to go backwards. When you are done reading, just hit `q` to exit.
 
 Unfortunately GitBash for Windows does not have the `man` command. Instead, try using the `--help` flag after the command you want to learn about. For internal bahs commands such as `cd` and  `pwd` you will be able to access the help file by typing `help function`.
 
-```
-ls --help
-help cd
-```
+~~~
+$ ls --help
+$ help cd
+~~~
+{:class="in"}
 
 And you also find the manual pages at many different sites online, e.g. [http://linuxmanpages.com/]().
 
 Programs that are run from the shell can get extremely complicated. To see an example, open up the manual page for the `find` program, which we will use later this session. No one can possibly learn all of these arguments, of course. So you will probably find yourself referring back to the manual page frequently.
 
----
-## Exploring your file system
+### Exploring your file system
 
 Other really important commands
 
@@ -267,24 +306,32 @@ Other really important commands
 
 **Determining file type**
 
-```
-file <filename>
-```
+~~~
+$ file <filename>
+~~~
+{:class="in"}
 
 e.g.
 
-```
-file surveys.csv
+~~~
+$ file surveys.csv
+~~~
+{:class="in"}
+
+~~~
 surveys.csv: ASCII text
-```
+~~~
+{:class="out"}
+Notice that the function `file` is unfortunately not defined in GitBash.
 
-Notice that the function `file` is unfortunately not defined in GitBash. Alternatively, Windows users can have a quick look at the file to see the contents of its first lines using the function `head`
+You can have a quick look at the file to see the contents of its first lines using the function `head` (similar to the `head()` function in R).
 
-```
-head <filename>
-```
+~~~
+$ head <filename>
+~~~
+{:class="in"}
 
-you can also fully examine files with the `less` command. Keeps the content from scrolling of the screen. You can also use the arrow keys to navigate up or down. Press enter or return to keep scrolling down and the `q` key to quit.
+You can also fully examine files with the `less` command. Keeps the content from scrolling of the screen. You can also use the arrow keys to navigate up or down. Press enter or return to keep scrolling down and the `q` key to quit.
 
 ***
-These lessons were adapted from materials by [Diego Barneche](http://nicercode.github.io/2014-02-13-UNSW/lessons/60-shell/)
+Acknowledgments: these lessons were adapted by Kara Woo from materials by [Diego Barneche](http://nicercode.github.io/2014-02-13-UNSW/lessons/60-shell/).
