@@ -220,12 +220,13 @@ The `t` options now sorts by time.
 Similarly you can try the following:
 
 Some options: *(list these on the board)*
-`-a`  List all files even those that are hidden. Files starting with a `.` are considered hidden;
-`-F`  All a trailing slash to help identify folders;
-`-l`  Long format;
-`-lh` Make file sizes human readable;
-`-S`  Sort by file size;
-`-t`  Sort by modification time.
+
+* `-a`  List all files even those that are hidden. Files starting with a `.` are considered hidden;
+* `-F`  All a trailing slash to help identify folders;
+* `-l`  Long format;
+* `-lh` Make file sizes human readable;
+* `-S`  Sort by file size;
+* `-t`  Sort by modification time.
 
 Try some of these. Do you see any new files that we have not discussed before? You can even combine several of these options in a single command like we did above with `ls -lt`.
 
