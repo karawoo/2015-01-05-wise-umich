@@ -12,7 +12,7 @@ My Terminal looks like this:
 
 ![](prompt.png)
 
-Yours might look different (these can be easily customized). Usually includes something like `username@machinename`, followed by the current working directory (more about that soon) and a `$` sign
+Yours might look different (these can be easily customized). Usually includes something like `username@machinename`, followed by the current working directory and a `$` sign. Note: a "directory" is what you may know as a "folder", and I'll be using these basically interchangeably throughout the lesson.
 
 ## Entering commands into the shell
 
@@ -135,7 +135,18 @@ $ cd /usr/bin
 
 from **anywhere**.
 
+**An important note:** having spaces in folder names or file names will confuse the computer. Once it sees a space, it will think the path is complete. For this reason it's recommended not to use spaces in your file/folder names. If you do have paths that contain spaces, you can encase the path that you type into the shell with quotation marks, e.g.:
+
+~~~
+$ cd "~/Desktop/folder with a space"
+~~~
+{:class="in"}
+
+*Stop and ask for questions*
+
 ### List all the files in this directory
+
+Now we're going to talk about how to view the contents of a folder (directory).
 
 ~~~
 $ ls
