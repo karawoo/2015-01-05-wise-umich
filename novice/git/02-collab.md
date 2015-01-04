@@ -40,10 +40,11 @@ Git can set up a repository on your local computer - no connection to a big serv
 GitHub is where code is collected online.
 
 Show a project on GitHub (further justification for learning).
-* [white et al 2012](https://github.com/weecology/white-etal-2012-ecology)
-* [Class Seminar] (https://github.com/PermuteSeminar/PermuteSeminar-2014)
-* [manuscript] (https://github.com/weecology/data-sharing-paper)
-* [R packages] (https://github.com/vqv/ggbiplot)
+
+* [White et al 2012](https://github.com/weecology/white-etal-2012-ecology)
+* [Class Seminar](https://github.com/PermuteSeminar/PermuteSeminar-2014)
+* [manuscript](https://github.com/weecology/data-sharing-paper)
+* [R packages](https://github.com/vqv/ggbiplot)
 
 
 GitHub connects your local repositories to the online world and allows your project to get __social__
