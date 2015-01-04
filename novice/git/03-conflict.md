@@ -298,12 +298,8 @@ or find a way to divide the work up differently.
 </div>
 
 <div class="challenge" markdown="1">
-Clone the repository created by your instructor.
-Add a new file to it,
-and modify an existing file (your instructor will tell you which one).
-When asked by your instructor,
-pull her changes from the repository to create a conflict,
-then resolve it.
+Repeat the above exercise with the roles swapped, adding an additional line to
+the file mars.txt so the other partner deals with the merge conflict.
 </div>
 
 <div class="challenge" markdown="1">
