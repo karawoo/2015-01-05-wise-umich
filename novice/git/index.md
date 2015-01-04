@@ -26,3 +26,9 @@ can and should be stored in a version control system.
 [Reference](../ref/02-git.html)
 
 </div>
+
+Optional bits:
+
+* [Branches](01.5-branches.html)
+* [Forking](03.5-forking.html)
+* [RStudio](03.75-RStudioGit.html)
