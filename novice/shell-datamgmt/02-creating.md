@@ -4,6 +4,10 @@ root: ../..
 Title: Creating, moving, and deleting files and directories
 ---
 
+# Creating, moving, and deleting files and directories
+
+I'm going to be working mainly in the `Desktop` directory -- recommend that people follow along.
+
 ## Creating an empty file
 
 Lets create an empty file using the `touch` command. Enter the command:
@@ -35,6 +39,43 @@ The `rm` command can be used to remove files. The `-i` adds the "are you sure?" 
 
 ***Warning: The shell does not have a recycling bin. So any file removed with `rm` is gone forever. Use with caution. Remember the -i argument***
 
+If you want to create a file with some text, say notes about what you are doing, you'll need to use a text editor. The one we'll be using here is nano.
+
+> #### Which Editor?
+>
+> When we say, "`nano` is a text editor," we really do mean "text": it can
+> only work with plain character data, not tables, images, or any other
+> human-friendly media. We use it in examples because almost anyone can
+> drive it anywhere without training, but please use something more
+> powerful for real work. On Unix systems (such as Linux and Mac OS X),
+> many programmers use [Emacs](http://www.gnu.org/software/emacs/) or
+> [Vim](http://www.vim.org/) (both of which are completely unintuitive,
+> even by Unix standards), or a graphical editor such as
+> [Gedit](http://projects.gnome.org/gedit/). On Windows, you may wish to
+> use [Notepad++](http://notepad-plus-plus.org/).
+>
+> No matter what editor you use, you will need to know where it searches
+> for and saves files. If you start it from the shell, it will (probably)
+> use your current working directory as its default location. If you use
+> your computer's start menu, it may want to save files in your desktop or
+> documents directory instead. You can change this by navigating to
+> another directory the first time you "Save As..."
+
+To create a new file and open nano, type
+
+~~~
+$ nano notes.txt
+~~~
+{:class="in"}
+
+*Pause to make sure this worked for everyone, especially Windows users who may not have installed nano.*
+
+Now, type a line of text, something like "This is where I am keeping my notes." To exit, hit Ctrl-X, then Y (to save), then Enter.
+
+Now use `ls` to view the contents of your desktop. Do you see the file you created? *(Does anyone not see it?)*
+
+**Exercise:** View the contents of the file you just created within your terminal (hint: we learned a command for viewing the contents of a file in the last section). Then, open the file, add some more text to it, save it, and exit.
+
 ## Manipulating the file system
 
 Make directories with `mkdir`. This will create a new directory within the current directory.
@@ -59,7 +100,7 @@ $ mv file1 file2
 ~~~
 {:class="in"}
 
-So if I am in my data directory and I want to copy or move one of the data files to my desktop, I would do.
+So if I am in my data directory and I want to copy or move one of the data files to my desktop, I would do. *(Do these, then show them on the Desktop. Do rm ~/Desktop/car-speeds.csv in between.)*
 
 ~~~
 $ cp car-speeds.csv ~/Desktop
@@ -81,9 +122,11 @@ $ cp car-speeds.csv ~/Desktop/car-speeds-2.csv
 ~~~
 {:class="in"}
 
+Both `cp` and `mv` can be used with directories in addition to files.
+
 See the `man` command to get help on options you can use with these commands.
 
-Remove files with `rm`
+Remove files with `rm`.
 
 ## Let's try out some of the commands above
 
@@ -158,7 +201,7 @@ rm -r temp
 ## Exercise
 
 Using the shell, create a folder on your desktop for materials from this
-workshop that looks like this.
+workshop that looks like this *(Draw on the board)*.
 
 ~~~
 |-- swc-wise-umich/
