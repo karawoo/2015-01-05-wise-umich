@@ -93,6 +93,19 @@ $ ls s*.csv
 
 Lists all csv files in the current directory whose names begin with the letter s.
 
+**Exercise:** View the head of all of the inflammation data files using one command.
+
+*Ask for several learners' examples - there are many ways to do accomplish this exercise, e.g.*
+
+~~~
+$ head i*
+$ head i*.csv
+$ head inflammation*.csv
+~~~
+{:class="in"}
+
+What if there were also a file called `influenza.csv`? Or `inflammation.doc`? Which examples would still work?
+
 ## Command History
 
 You can easily access previous commands.  Hit the up arrow. Hit it again.  You can step backwards through your command history. The down arrow takes your forwards in the command history.
