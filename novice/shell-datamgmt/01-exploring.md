@@ -138,9 +138,11 @@ from **anywhere**.
 **An important note:** having spaces in folder names or file names will confuse the computer. Once it sees a space, it will think the path is complete. For this reason it's recommended not to use spaces in your file/folder names. If you do have paths that contain spaces, you can encase the path that you type into the shell with quotation marks, e.g.:
 
 ~~~
-$ cd "~/Desktop/folder with a space"
+$ cd "Users/Kara/Desktop/folder with a space"
 ~~~
 {:class="in"}
+
+But note that the tilde shortcut for the home directory doesn't work within the quotations.
 
 *Stop and ask for questions*
 
@@ -230,7 +232,7 @@ The `t` options now sorts by time.
 
 Similarly you can try the following:
 
-Some options: *(list these on the board)*
+Some options: *(list these on the board -- show output of ls -a and explain . and ..)*
 
 * `-a`  List all files even those that are hidden. Files starting with a `.` are considered hidden;
 * `-F`  All a trailing slash to help identify folders;
@@ -315,6 +317,7 @@ Other really important commands
 * `file`
 * `less`
 * `head`
+* `wc`
 
 **Determining file type**
 
@@ -343,7 +346,11 @@ $ head <filename>
 ~~~
 {:class="in"}
 
+`wc` will give you the word count of a file. The output shows the number of lines, words, and bytes in a file. `wc -l` will tell you just the number of lines.
+
 You can also fully examine files with the `less` command. Keeps the content from scrolling of the screen. You can also use the arrow keys to navigate up or down. Press enter or return to keep scrolling down and the `q` key to quit.
+
+*Let's list on the whiteboard the commands we've learned so far (probably in Etherpad too).*
 
 ***
 Acknowledgments: these lessons were adapted by Kara Woo from materials by [Diego Barneche](http://nicercode.github.io/2014-02-13-UNSW/lessons/60-shell/).

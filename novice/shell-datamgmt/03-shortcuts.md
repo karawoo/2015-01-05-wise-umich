@@ -65,12 +65,13 @@ Tab completion can also fill in the names of programs. For example, type `e<tab>
 One of the biggest reasons using shell is faster than ever using a GUI file manager is that it allows for wildcards. There are special characters known as wildcards. They allow you to select files based on patterns of characters.
 
 Wildcard examples:
-`*`             Matches any character;
-`?`             Matches any single character;
-`[characters]`  Matches any character in this set;
-`![characters]` Matches any character NOT in this set.
 
-Navigate to the `gapminder/data` directory. This directory contains examples of sequencing data. If we type `ls`, we will see that there are a bunch of files which are just four digit numbers. By default, `ls` lists all of the files in a given directory. The `*` character is a shortcut for "everything". Thus, if you enter `ls *`, you will see all of the contents of a given directory. Now try this command:
+* `*` Matches any character;
+* `?` Matches any single character;
+* `[characters]` Matches any character in this set;
+* `![characters]` Matches any character NOT in this set.
+
+By default, `ls` lists all of the files in a given directory. The `*` character is a shortcut for "everything". Thus, if you enter `ls *`, you will see all of the contents of a given directory. Now try this command:
 
 ~~~
 $ ls *.csv
@@ -111,7 +112,6 @@ What if there were also a file called `influenza.csv`? Or `inflammation.doc`? Wh
 You can easily access previous commands.  Hit the up arrow. Hit it again.  You can step backwards through your command history. The down arrow takes your forwards in the command history.
 
 * ^-C will cancel the command you are writing, and give you a fresh prompt;
-* ^-R will do a reverse-search through your command history. This is very useful.
 
 You can also review your recent commands with the `history` command. Just enter:
 

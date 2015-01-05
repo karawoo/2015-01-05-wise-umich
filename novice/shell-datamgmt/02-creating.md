@@ -130,7 +130,7 @@ Remove files with `rm`.
 
 ## Let's try out some of the commands above
 
-First create a temporary directory on your desktop.
+First create a temporary directory on your desktop. *Ask for people to call out commands to make directory and navigate into it.*
 
 ~~~
 $ cd ~/Desktop
@@ -149,7 +149,7 @@ $ cp ~/Desktop/swc-data/*.csv .
 
 Use `ls` to view the contents of the current directory. What just happened? *(Ask for a volunteer)*
 
-Why? Can anyone break down the commands we just did? *(Ask again for a volunteer)*
+This is our first introduction to wildcards, which I'm going to talk a bit more about later. The `*.csv` is telling the computer to match anything that ends in .csv, which in this case is all of our data files from Christie's lesson.
 
 Now try and remove scratchpad.
 
@@ -164,6 +164,8 @@ What just happened? If you want to remove everything within scratchpad no matter
 rm -r scratchpad
 ~~~
 {:class="in"}
+
+*Maybe skip this since it won't work for Windows users*
 
 You can also create an entire directory structure with a single call (unfortunately this shortcut does not work in GitBash). e.g.
 
