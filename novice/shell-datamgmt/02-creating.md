@@ -215,5 +215,7 @@ workshop that looks like this *(Draw on the board)*.
 ~~~
 {:class="out"}
 
+Note that this will break read.csv in your R script *go to RStudio and demonstrate, then use relative paths to fix loading of data*
+
 ***
 Acknowledgments: these lessons were adapted by Kara Woo from materials by [Diego Barneche](http://nicercode.github.io/2014-02-13-UNSW/lessons/60-shell/).
