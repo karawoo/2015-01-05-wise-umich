@@ -13,7 +13,8 @@ management topics.
 2.  [Navigating the Shell](01-exploring.html)
 3.  [Creating Things](02-creating.html)
 4.  [Shortcuts](03-shortcuts.html)
-5.  [Data management](04-datamgmt.html)
+5.  [Pipes and filters](http://software-carpentry.org/v5/novice/shell/03-pipefilter.html)
+6.  [Data management](04-datamgmt.html)
 
 [Reference](../ref/01-shell.html)
 
