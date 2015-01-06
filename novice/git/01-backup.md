@@ -350,13 +350,6 @@ the revision's author,
 when it was created,
 and the log message Git was given when the revision was created.
 
-_Useful `git log` flags:_
-* -3 (shows only the 3 most recent commits)
-* --oneline (condenses each log into a single line, for quicker scanning)
-* --stat (gives more details for each commit, ++--)
-* --since=X.minutes/hours/days/weeks/months/years or YY-MM-DD-HH:MM (for specific time frames)
-* --author=<pattern> (look for specific people)
-
 > #### Where Are My Changes?
 >
 > If we run `ls` at this point, we will still see just one file called `mars.txt`.
@@ -617,6 +610,14 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
     Starting to think about Mars
 ~~~
 {:class="out"}
+
+_Useful `git log` flags:_
+
+* -3 (shows only the 3 most recent commits)
+* --oneline (condenses each log into a single line, for quicker scanning)
+* --stat (gives more details for each commit, ++--)
+* --since=X.minutes/hours/days/weeks/months/years or YY-MM-DD-HH:MM (for specific time frames)
+* --author=<pattern> (look for specific people)
 
 To recap, when we want to add changes to our repository,
 we first need to add the changed files to the staging area
