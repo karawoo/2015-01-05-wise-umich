@@ -74,6 +74,7 @@ GitHub, much like other forge hosting services (launchpad, bitbucket, googlecode
 * varying permissions for various groups of users
 * commit triggered mailing lists
 * other service hooks (twitter, etc.)
+* even hosting simple websites (like my [personal webpage](http://karawoo.com))
 
 __Give a quick tour of GitHub__
 
