@@ -665,8 +665,9 @@ index df0654a..b36abfd 100644
 {:class="out"}
 
 _Useful git diff flags_
-`git diff --stat` gives us a summary of the filename and number of insertions/deletions
-`git diff -- filename` looks at the differences for a specific file
+
+* `git diff --stat` gives us a summary of the filename and number of insertions/deletions
+* `git diff -- filename` looks at the differences for a specific file
 
 In this way,
 we build up a chain of revisions.
