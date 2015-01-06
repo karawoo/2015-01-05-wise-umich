@@ -140,7 +140,7 @@ go into the local `planets` repository,
 and run this command:
 
 ~~~
-$ git remote add origin https://github.com/vlad/planets
+$ git remote add origin https://github.com/vlad/planets.git
 ~~~
 {:class="in"}
 
